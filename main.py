@@ -33,6 +33,7 @@ def update(data):
                      grid[(i-1)%ROWS, j] + grid[(i+1)%ROWS, j] +
                      grid[(i-1)%ROWS, (j-1)%COLS] + grid[(i-1)%ROWS, (j+1)%COLS] +
                      grid[(i+1)%ROWS, (j-1)%COLS] + grid[(i+1)%ROWS, (j+1)%COLS]) / 255
+            # 255 is the normalization number
             # Conway's rules
             if grid[i, j] == ON:
                 if (total < 2) or (total > 3):
